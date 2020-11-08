@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application' %>
+    <%= stylesheet_packs_with_chunks_tag 'styles/another' %>
+    <%= stylesheet_packs_with_chunks_tag 'styles/other' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_packs_with_chunks_tag 'scripts/another', 'scripts/other' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
