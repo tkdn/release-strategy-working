@@ -1,6 +1,9 @@
-import "whatwg-fetch"
-import { foo } from "./another"
+class MyClass {
+    constructor(){}
+    foo(){
+        return "foo";
+    }
+}
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json, foo))
+const my = new MyClass()
+export const foo = my.foo()
